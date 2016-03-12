@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14578102737470" configfile="/new_Monitoria/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="new_Monitoria" id="pf145781035137710" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf145781035137711" path="/pages/public/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/secured/user/cadastro.xhtml" id="pf145781035137712" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf145781035137711" path="/pages/secured/user/cadastro.xhtml"/>
+  <links id="pf145781035137711" target="pf145781035137712" source="pf145781035137710" outcome="Sucesso" fromaction="#{controllerBean.cadastrar}"/>
+</pageflow:Pageflow>
