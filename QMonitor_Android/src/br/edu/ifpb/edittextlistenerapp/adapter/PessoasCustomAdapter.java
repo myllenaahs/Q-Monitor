@@ -38,7 +38,6 @@ public class PessoasCustomAdapter extends BaseAdapter {
             holder.txtInscription = (TextView) convertView.findViewById(R.id.inscription);
             holder.txtFullName = (TextView) convertView.findViewById(R.id.fullName);
             holder.txtEmail = (TextView) convertView.findViewById(R.id.email);
-            holder.txtEntregue = (TextView) convertView.findViewById(R.id.entregue);
 
             convertView.setTag(holder);
 
@@ -50,14 +49,10 @@ public class PessoasCustomAdapter extends BaseAdapter {
         Pessoa pessoaItem = (Pessoa) getItem(position);
 
         holder.txtFullName.setText(pessoaItem.getNome());
-        holder.txtInscription.setText(pessoaItem.getDescricao());
-        holder.txtEmail.setText(pessoaItem.getEmail());
+        holder.txtInscription.setText(pessoaItem.getDisciplina());
+        holder.txtEmail.setText(pessoaItem.getHorario());
         
-        if (pessoaItem.isEntregue()== false){
-        	holder.txtEntregue.setText("Não Entregue");
-        } else 
-        	holder.txtEntregue.setText("Entregue");              
-         
+
         return convertView;
     }
  
@@ -82,6 +77,5 @@ public class PessoasCustomAdapter extends BaseAdapter {
         TextView txtFullName;
         TextView txtInscription;
         TextView txtEmail;
-        TextView txtEntregue;
     }
 }

@@ -19,7 +19,7 @@ import java.net.URL;
 public class HttpService {
 
 	// IP da máquina onde se encontra o servidor. response
-	private static final String URL_CONTEXT = "http://ladoss.com.br:8773/pesquisa-simpif-service/services/";
+	private static final String URL_CONTEXT = "http://192.168.1.134:8080/Monitor_SERVICE/";
 
 	public static HttpURLConnection sendGetRequest(String service)
 			throws MalformedURLException, IOException {

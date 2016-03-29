@@ -73,13 +73,13 @@ public class BuscarNomeActivity extends Activity implements TextWatcher,
 			int count) {
 
 		Log.i("EditTextListener", "onTextChanged: " + charSequence);
-		String nome = charSequence.toString();
+		String disciplina = charSequence.toString();
 		Pessoa pessoa = new Pessoa();
-		pessoa.setNome(nome);
+		pessoa.setDisciplina(disciplina);
 		// Consultar o servidor. Criar o JSONObject e uma AsyncTask<JSONObject,
 		// Void, Response>
 
-		if (nome.length() >= TAMANHO_MINIMO_TEXTO) {
+		if (disciplina.length() >= TAMANHO_MINIMO_TEXTO) {
 			// Gson
 			Gson gson = new GsonBuilder().setExclusionStrategies(
 					new EstrategiaExclusaoJSON()).create();
@@ -117,9 +117,8 @@ public class BuscarNomeActivity extends Activity implements TextWatcher,
 				ExibeDadosActivity.class);
 		Bundle dados = new Bundle();
 		dados.putString("Nome",pessoa.getNome());
-		dados.putString("Email",pessoa.getEmail());
-		dados.putString("Inscricao", pessoa.getDescricao());
-		dados.putBoolean("Entregue", pessoa.isEntregue());
+		dados.putString("Disciplina",pessoa.getDisciplina());
+		dados.putString("Horario", pessoa.getHorario());
 		it.putExtras(dados);
 		startActivity(it);
 
