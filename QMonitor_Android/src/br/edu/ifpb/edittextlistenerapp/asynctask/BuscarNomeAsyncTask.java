@@ -35,7 +35,7 @@ public class BuscarNomeAsyncTask extends AsyncTask<String, Void, Response> {
 
 		try {
 			Log.e("NotificationWearApp", "erro do back " + stringJSON);
-			response = HttpService.sendJSONPostResquest("get-byname",
+			response = HttpService.sendJSONPostResquest("monitor/disciplina/pesquisar",
 					stringJSON);
 
 		} catch (IOException e) {

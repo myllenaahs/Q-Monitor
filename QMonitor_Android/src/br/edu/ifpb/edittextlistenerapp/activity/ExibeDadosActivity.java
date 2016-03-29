@@ -19,15 +19,10 @@ public class ExibeDadosActivity extends Activity {
 
 		TextView nometext = (TextView) findViewById(R.id.nome);
 		nometext.setText(dados.getString("Nome"));
-		TextView inscricao = (TextView) findViewById(R.id.inscricao);
-		inscricao.setText(dados.getString("Inscricao"));
-		TextView email = (TextView) findViewById(R.id.email);
-		email.setText(dados.getString("Email"));
-		TextView entregue = (TextView) findViewById(R.id.entregue);
-		if(dados.getBoolean("Entregue")==false){
-			entregue.setText("Kit não entregue");
-		}else{
-			entregue.setText("Kit entregue");
-		}
+		TextView disciplina = (TextView) findViewById(R.id.inscricao);
+		disciplina.setText(dados.getString("Disciplina"));
+		TextView horario = (TextView) findViewById(R.id.email);
+		horario.setText(dados.getString("Horario"));
+		
 	}
 }

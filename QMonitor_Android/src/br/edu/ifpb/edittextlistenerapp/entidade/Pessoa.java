@@ -17,30 +17,48 @@ public class Pessoa implements Serializable {
 	}
 
 
-    public Pessoa (String nome, String descricao) {
+    public Pessoa (String nome, String horario, String disciplina) {
         this.nome = nome;
-        this.descricao = descricao;
+        this.horario=horario;
+        this.disciplina=disciplina;
     }
+      
 
     @ExcluirJSON
 	@SerializedName("id")
     private int id;
-
+    
+    @ExcluirJSON
     @SerializedName("fullName")
     private String nome;
     
     @ExcluirJSON
-    @SerializedName("email")
-    private String email;
-
-    @ExcluirJSON
-    @SerializedName("typeInscription")
-    private String descricao;
-
-    @ExcluirJSON
-    @SerializedName("isDelivered")
-    private boolean entregue;
+    @SerializedName("horario")
+    private String horario;
     
+    @SerializedName("disciplina")
+    private String disciplina;
+
+
+    public String getHorario() {
+		return horario;
+	}
+
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+
+	public String getDisciplina() {
+		return disciplina;
+	}
+
+
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+	
     public int getId() {
 		return id;
 	}
@@ -49,21 +67,6 @@ public class Pessoa implements Serializable {
 		this.id = id;
 	}
 
-	public boolean isEntregue() {
-		return entregue;
-	}
-
-	public void setEntregue(boolean entregue) {
-		this.entregue = entregue;
-	}
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 
     public String getNome() {
         return nome;
@@ -73,16 +76,10 @@ public class Pessoa implements Serializable {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  
 
     @Override
     public String toString() {
-        return "[fullName: " + nome + "; email: " + email + "]";
+        return "[fullName: " + nome + "; email: " + horario + "]";
     }
 }
