@@ -13,7 +13,7 @@ public class ServiceApplication extends Application {
 	public ServiceApplication() {
 		
 		// Serviços		
-		this.singletons.add(new RecursoOla());
+		this.singletons.add(new MonitorController());
 		this.singletons.add(new RecursoQuadro());
 	}
 

@@ -11,8 +11,8 @@ import br.edu.ifpb.Monitoria.entidade.Monitor;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-@Path("/monitor")
-public class RecursoMonitor {
+@Path("/recurso")
+public class RecursoController {
 	
 
 	 @POST

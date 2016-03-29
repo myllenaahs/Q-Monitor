@@ -12,25 +12,25 @@
 <body>
 
 	<h:form>
-			Nome: <h:inputText value="${monitor.nome}">
+			Nome: <h:inputText value="${monitorBean.monitor.nome}">
 		</h:inputText>
 		
-			Login: <h:inputText value="${monitor.login}">
+			Login: <h:inputText value="${monitorBean.monitor.login}">
 		</h:inputText>
 		
-			Senha: <h:inputText value="${monitor.senha}">
+			Senha: <h:inputText value="${monitorBean.monitor.senha}">
 		</h:inputText>
 			
-			Matricula: <h:inputText value="${monitor.matricula}">
+			Matricula: <h:inputText value="${monitorBean.monitor.matricula}">
 		</h:inputText>
 		
-			Horario: <h:inputText value="${monitor.horario}">
+			Horario: <h:inputText value="${monitorBean.monitor.horario}">
 		</h:inputText>
 		
-			Disciplina: <h:inputText value="${monitor.disciplina}">
+			Disciplina: <h:inputText value="${monitorBean.monitor.disciplina}">
 		</h:inputText>
 
-		<h:commandButton id="cadastrar" action="#{monitor.cadastra}"
+		<h:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
 			value="Cadastrar" />
 
 	</h:form>

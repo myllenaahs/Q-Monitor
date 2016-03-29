@@ -12,15 +12,15 @@
 <body>
 
 	<h:form>
-			Disciplina: <h:inputText value="${monitor.disciplina}">
+			Disciplina: <h:inputText value="${monitorBean.monitor.disciplina}">
 		</h:inputText>
 
-		<h:commandButton id="find" action="#{monitor.encontra}"
+		<h:commandButton id="find" action="#{monitorBean.listar}"
 			value="Procurar" />
 
 	</h:form>
 
-	<p:dataTable value="${monitor.monitores}" var="user" rules="rows">
+	<p:dataTable value="${monitorBean.monitores}" var="user" rules="rows">
 		<f:facet name="caption">Lista de Monitores  
                </f:facet>
 		<f:facet name="footer">Fim da listagem</f:facet>

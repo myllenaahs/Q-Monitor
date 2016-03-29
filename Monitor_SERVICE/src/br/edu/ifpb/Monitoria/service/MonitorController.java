@@ -3,11 +3,9 @@ package br.edu.ifpb.Monitoria.service;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
@@ -19,33 +17,33 @@ import br.edu.ifpb.Monitoria.DAO.MonitorDAO;
 import br.edu.ifpb.Monitoria.entidade.Erro;
 import br.edu.ifpb.Monitoria.entidade.Monitor;
 
-@Path("services")
-public class RecursoOla {
+@Path("monitor")
+public class MonitorController {
 
-	private static Logger logger = LogManager.getLogger(RecursoOla.class);
+	private static Logger logger = LogManager.getLogger(MonitorController.class);
 
 	@POST
-	@Path("/get-byname")
+	@Path("/disciplina/pesquisar")
 	@Consumes("application/json")
 	@Produces("application/json")
-	public List<Monitor> findUserByName(Monitor monitor) {
-
-		logger.info("/get-byname: " + monitor.getNome());
+	public List<Monitor> pesquisarMonitorDisciplina(Monitor monitor) {
 
 		String disciplina = monitor.getDisciplina().trim().toUpperCase();
+		
+		logger.info("Listar Recurso: " + disciplina);		
 
 		List<Monitor> monitores = MonitorDAO.getInstance().getByName(disciplina);
-		logger.info("Participants: " + monitores.size() + "[" + monitores + "]");
+		
+		logger.info("Participantes: " + monitores.size() + "[" + monitores + "]");
 
 		return monitores;
-
 	}
 
 	@POST
-	@Path("/register")
+	@Path("/cadastrar")
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response insertUser(Monitor monitor) {
+	public Response cadastrarMonitor(Monitor monitor) {
 		
 		logger.info("/register: " + monitor);		
 		ResponseBuilder builder;
@@ -64,10 +62,4 @@ public class RecursoOla {
 
 		return builder.build();
 	}
-
-	@GET
-	public String digaOla(@QueryParam("parametro") String parametro) {
-		return "Olá Mundo! <br/> O parâmetro de \"Query\"enviado foi: " + parametro;
-	}
-
 }
