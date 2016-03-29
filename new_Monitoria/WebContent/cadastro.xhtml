@@ -48,13 +48,13 @@
 
 			<h2>Cadastro de Monitores</h2>
 			<h:form>
-				Nome do monitor: <h:inputText value="${controllerBean.nome}">
+				Nome do monitor: <h:inputText value="${controllerBean.cliente.nome}">
 				</h:inputText>
-				Disciplina do monitor: <h:inputText value="${controllerBean.disciplina}">
+				Disciplina do monitor: <h:inputText value="${controllerBean.cliente.disciplina}">
 				</h:inputText>
-				Login do monitor: <h:inputText value="${controllerBean.login}">
+				Login do monitor: <h:inputText value="${controllerBean.cliente.login}">
 				</h:inputText>				
-				Senha do monitor: <h:inputSecret value="${controllerBean.senha}">
+				Senha do monitor: <h:inputSecret value="${controllerBean.cliente.senha}">
 				</h:inputSecret>
 				
 				<h:commandButton id="inverter" action="${controllerBean.cadastro}"
