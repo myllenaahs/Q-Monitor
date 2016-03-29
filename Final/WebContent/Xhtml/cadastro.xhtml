@@ -10,29 +10,45 @@
 <title>Cadastro de Monitores</title>
 </head>
 <body>
-
 	<h:form>
-			Nome: <h:inputText value="${monitorBean.monitor.nome}">
-		</h:inputText>
+		    <p:panel id="panel"> 
+		 
+		        <h:panelGrid columns="3" cellpadding="5">
+					Nome: <h:inputText value="${monitorBean.monitor.nome}">
+						</h:inputText>
+	        	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					Login: <h:inputText value="${monitorBean.monitor.login}">
+						</h:inputText>
+	       	 	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					Senha: <h:inputText value="${monitorBean.monitor.senha}">
+						</h:inputText>
+	        	</h:panelGrid>
+					
+		        <h:panelGrid columns="3" cellpadding="5">
+					Matricula: <h:inputText value="${monitorBean.monitor.matricula}">
+						</h:inputText>
+	        	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					Horario: <h:inputText value="${monitorBean.monitor.horario}">
+						'</h:inputText>
+	        	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					Disciplina: <h:inputText value="${monitorBean.monitor.disciplina}">
+						</h:inputText>
+	        	</h:panelGrid>						
 		
-			Login: <h:inputText value="${monitorBean.monitor.login}">
-		</h:inputText>
-		
-			Senha: <h:inputText value="${monitorBean.monitor.senha}">
-		</h:inputText>
-			
-			Matricula: <h:inputText value="${monitorBean.monitor.matricula}">
-		</h:inputText>
-		
-			Horario: <h:inputText value="${monitorBean.monitor.horario}">
-		</h:inputText>
-		
-			Disciplina: <h:inputText value="${monitorBean.monitor.disciplina}">
-		</h:inputText>
-
-		<h:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
-			value="Cadastrar" />
-
+		        <h:panelGrid>
+					<h:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
+						value="Cadastrar" />	
+		        </h:panelGrid>
+	 
+	      </p:panel>
 	</h:form>
 
 </body>

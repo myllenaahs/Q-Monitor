@@ -12,12 +12,18 @@
 <body>
 
 	<h:form>
-			Disciplina: <h:inputText value="${monitorBean.monitor.disciplina}">
-		</h:inputText>
-
-		<h:commandButton id="find" action="#{monitorBean.listar}"
-			value="Procurar" />
-
+		<p:panel id="panel"> 
+		
+			<h:panelGrid columns="3" cellpadding="5">
+					Disciplina: <h:inputText value="${monitorBean.monitor.disciplina}">
+				</h:inputText>
+			</h:panelGrid>
+			
+			<h:panelGrid columns="3" cellpadding="5">
+			<h:commandButton id="find" action="#{monitorBean.listar}"
+				value="Procurar" />
+			</h:panelGrid>
+		</p:panel>
 	</h:form>
 
 	<p:dataTable value="${monitorBean.monitores}" var="user" rules="rows">
