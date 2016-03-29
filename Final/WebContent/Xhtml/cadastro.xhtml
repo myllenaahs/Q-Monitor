@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cadastro de Monitores</title>
+</head>
+<body>
+
+	<h:form>
+			Nome: <h:inputText value="${monitor.nome}">
+		</h:inputText>
+		
+			Login: <h:inputText value="${monitor.login}">
+		</h:inputText>
+		
+			Senha: <h:inputText value="${monitor.senha}">
+		</h:inputText>
+			
+			Matricula: <h:inputText value="${monitor.matricula}">
+		</h:inputText>
+		
+			Horario: <h:inputText value="${monitor.horario}">
+		</h:inputText>
+		
+			Disciplina: <h:inputText value="${monitor.disciplina}">
+		</h:inputText>
+
+		<h:commandButton id="cadastrar" action="#{monitor.cadastra}"
+			value="Cadastrar" />
+
+	</h:form>
+
+</body>
+</html>

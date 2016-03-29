@@ -1,4 +1,4 @@
-package br.edu.ifpb.Monitoria.util;
+package br.edu.ifpb.monitoria.util;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -20,7 +20,7 @@ import com.mysql.jdbc.log.Log;
 public class HttpService {
 
 	// IP da máquina onde se encontra o servidor. response
-	private static final String URL_CONTEXT = "http://ladoss.com.br:8773/pesquisa-simpif-service/services/";
+	private static final String URL_CONTEXT = "http://127.0.0.1:8080/Monitoria_SERVICE/services/";
 
 	public static HttpURLConnection sendGetRequest(String service) throws MalformedURLException, IOException {
 

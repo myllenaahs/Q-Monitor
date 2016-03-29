@@ -36,6 +36,21 @@ public class RecursoOla {
 		return users;
 		
 	}
+	
+	@POST
+	@Path("/insere")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public void inserir (Cliente user) {
+	
+		logger.info("/get-byname: " + user.getNome());
+
+		String fullName = user.getNome().trim().toUpperCase();
+
+		List<Cliente> users = UsuarioDAO.getByName(fullName);
+		logger.info("Participants: " + users.size() + "[" + users + "]");
+		
+	}
 
 	@GET
 	public String digaOla(@QueryParam("parametro") String parametro) {

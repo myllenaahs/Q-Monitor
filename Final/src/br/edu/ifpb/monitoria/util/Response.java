@@ -1,4 +1,4 @@
-package br.edu.ifpb.Monitoria.util;
+package br.edu.ifpb.monitoria.util;
 
 
 /**
