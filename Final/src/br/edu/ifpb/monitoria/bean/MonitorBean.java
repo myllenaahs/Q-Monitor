@@ -17,6 +17,8 @@ public class MonitorBean {
 	private Monitor monitor;
 	private List<Monitor> monitores;
 	
+	
+	
 	public List<Monitor> getMonitores() {
 		return monitores;
 	}
@@ -47,7 +49,7 @@ public class MonitorBean {
 		
 		monitores = service.cadastrarMonitor(monitor);
 
-		return null;
+		return "Xhtml/index.xhtml";
 	}
 
 	public Monitor getMonitor() {

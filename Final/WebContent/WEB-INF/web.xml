@@ -5,12 +5,6 @@
     <welcome-file>Xhtml/index.xhtml</welcome-file>
   </welcome-file-list>
   
-  <!-- Theme - Primeface -->
-	<context-param>  
-		<param-name>primefaces.THEME</param-name>  
-		<param-value>flick</param-value>  
-	</context-param> 
-  
   
   <!-- JSF -->
 	<servlet>
@@ -31,4 +25,11 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>/faces/*</url-pattern>
 	</servlet-mapping>
+	
+	<!-- Theme - Primeface -->
+	<context-param>  
+		<param-name>primefaces.THEME</param-name>  
+		<param-value>hot-sneaks</param-value>  
+	</context-param> 
+	
 </web-app>

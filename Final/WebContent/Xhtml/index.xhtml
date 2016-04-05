@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta charset="ISO-8859-1"/>
+<title>Q-Monitor</title>
 
-	<ui:define name="title">
-		Página Principal
-	</ui:define>
+</h:head>
+<h:body>
+
+	<form>
+	    <p:panel id="panel"> 
+	 
+	        <h:panelGrid columns="3" cellpadding="5">
+	            <p:outputLabel  value="Cadastrar Monitor:" />	            
+				<p:button outcome="cadastro" value="Cadastrar"/>
+				
+			</h:panelGrid>
+			
+	 		<h:panelGrid columns="3" cellpadding="5">
+	            <p:outputLabel value="Procurar Monitor:" />
+	            
+				<p:button outcome="find" value="Procurar"/>
+				
+	        </h:panelGrid>
+	 
+	      </p:panel>
+	</form>
 	
-	<ui:define name="conteudo">
-	
-		<h:form>
-			<p:growl id="messages" />
-
-			<p:menubar>
-				<p:submenu label="Cadastrar" icon="ui-icon-document">
-					<p:submenu label="Novo" icon="ui-icon-contact">
-						<p:menuitem value="Monitor" url="Xhtml/cadastro.xhtml" />
-						<p:menuitem value="Coordenador" url="#" />
-					</p:submenu>
-				</p:submenu>
-
-				<p:submenu label="Procurar" icon="ui-icon-pencil">
-					<p:menuitem value="Monitores" url="Xhtml/find.xhtml"
-						icon="ui-icon-arrowreturnthick-1-w" />
-				</p:submenu>
-
-				<f:facet name="options">
-					<p:inputText style="margin-right:10px" placeholder="Search" />
-				</f:facet>
-			</p:menubar>
-		</h:form>
-	</ui:define>
-</ui:composition>
+</h:body>
+</html>
