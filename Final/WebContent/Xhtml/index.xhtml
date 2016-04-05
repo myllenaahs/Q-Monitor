@@ -6,33 +6,34 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 <head>
-<meta charset="ISO-8859-1"/>
-<title>Insert title here</title>
+<meta charset="ISO-8859-1" />
+<title>Q-Monitor</title>
 </head>
 <body>
 
+
 	<h:form>
-	    <p:panel id="panel"> 
-	 
-	        <h:panelGrid columns="3" cellpadding="5">
-	            <p:outputLabel  value="Cadastrar Monitor:" />	            
+		<p:panel id="panel">
+
+			<h:panelGrid columns="3" cellpadding="5">
+				<p:outputLabel value="Cadastrar Monitor:" />
 				<p:button outcome="cadastro" value="Cadastrar">
-					<f:param name="cadastro" value="10"/>
+					<f:param name="cadastro" value="10" />
 				</p:button>
-				
+
 			</h:panelGrid>
-			
-	 		<h:panelGrid columns="3" cellpadding="5">
-	            <p:outputLabel value="Procurar Monitor:" />
-	            
+
+			<h:panelGrid columns="3" cellpadding="5">
+				<p:outputLabel value="Procurar Monitor:" />
+
 				<p:button outcome="find" value="Procurar">
-					<f:param name="cadastro" value="10"/>
-				</p:button> 
-	 
-	        </h:panelGrid>
-	 
-	      </p:panel>
+					<f:param name="cadastro" value="10" />
+				</p:button>
+
+			</h:panelGrid>
+
+		</p:panel>
 	</h:form>
-	
+
 </body>
 </html>
