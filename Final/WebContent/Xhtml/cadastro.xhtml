@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Cadastro de Monitores</title>
-</head>
-<body>
-	<h:form>
+	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
 
-		<p:panel id="panel">
+	<ui:define name="title">
+		Cadastro
+	</ui:define>
 
-			<h:panelGrid columns="3" cellpadding="5"> 
+	<ui:define name="conteudo">
+		<h:form>
+
+			<p:panel id="panel">
+				<h:panelGrid columns="3" cellpadding="5"> 
 					Nome: <p:inputText value="${monitorBean.monitor.nome}">
-				</p:inputText>
-			</h:panelGrid>
+					</p:inputText>
+				</h:panelGrid>
 
-			<h:panelGrid columns="3" cellpadding="5">
+				<h:panelGrid columns="3" cellpadding="5">
 					Login: <p:inputText value="${monitorBean.monitor.login}">
-				</p:inputText>
-			</h:panelGrid>
+					</p:inputText>
+				</h:panelGrid>
 
-			<h:panelGrid columns="3" cellpadding="5">
+				<h:panelGrid columns="3" cellpadding="5">
 					Senha: <p:password value="${monitorBean.monitor.senha}">
-				</p:password>
-			</h:panelGrid>
+					</p:password>
+				</h:panelGrid>
 
-			<h:panelGrid columns="3" cellpadding="5">
+				<h:panelGrid columns="3" cellpadding="5">
 					Matricula: <p:inputText value="${monitorBean.monitor.matricula}">
-				</p:inputText>
-			</h:panelGrid>
+					</p:inputText>
+				</h:panelGrid>
 
-			<h:panelGrid columns="3" cellpadding="5">
+				<h:panelGrid columns="3" cellpadding="5">
 					Horario: <p:inputText value="${monitorBean.monitor.horario}">
-				</p:inputText>
-			</h:panelGrid>
+					</p:inputText>
+				</h:panelGrid>
 
-			<h:panelGrid columns="3" cellpadding="5">
+				<h:panelGrid columns="3" cellpadding="5">
 					Disciplina: <p:inputText value="${monitorBean.monitor.disciplina}">
-				</p:inputText>
-			</h:panelGrid>
+					</p:inputText>
+				</h:panelGrid>
 
-			<h:panelGrid>
-				<p:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
-					value="Cadastrar" />
-			</h:panelGrid>
+				<h:panelGrid>
+					<p:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
+						value="Cadastrar" />
+				</h:panelGrid>
 
-		</p:panel>
-	</h:form>
-
-</body>
-</html>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

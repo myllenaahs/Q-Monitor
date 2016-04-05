@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Encontre Monitores</title>
-</head>
-<body>
+	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
 
-	<h:form>
-		<p:panel id="panel">
+	<ui:define name="title">
+		Procurar Monitores
+	</ui:define>
 
-			<h:panelGrid columns="3" cellpadding="5">
+	<ui:define name="conteudo">
+		<h:form>
+			<p:panel id="panel">
+
+				<h:panelGrid columns="3" cellpadding="5">
 					Disciplina: <p:inputText value="${monitorBean.monitor.disciplina}">
-				</p:inputText>
-			</h:panelGrid>
+					</p:inputText>
+				</h:panelGrid>
 
-			<h:panelGrid columns="3" cellpadding="5">
-				<p:commandButton id="find" action="#{monitorBean.listar}"
-					value="Procurar" />
-			</h:panelGrid>
-		</p:panel>
-	</h:form>
+				<h:panelGrid columns="3" cellpadding="5">
+					<p:commandButton id="find" action="#{monitorBean.listar}"
+						value="Procurar" />
+				</h:panelGrid>
+			</p:panel>
+		</h:form>
 
-	<p:dataTable value="${monitorBean.monitores}" var="user" rules="rows">
-		<f:facet name="caption">Lista de Monitores  
+		<p:dataTable value="${monitorBean.monitores}" var="user" rules="rows">
+			<f:facet name="caption">Lista de Monitores  
                </f:facet>
-		<f:facet name="footer">Fim da listagem</f:facet>
-		<p:column>
-			<f:facet name="header">Nome</f:facet>#{user.nome}  
+			<f:facet name="footer">Fim da listagem</f:facet>
+			<p:column>
+				<f:facet name="header">Nome</f:facet>#{user.nome}  
                </p:column>
-		<p:column>
-			<f:facet name="header">Horario</f:facet>#{user.horario}  
+			<p:column>
+				<f:facet name="header">Horario</f:facet>#{user.horario}  
                </p:column>
-	</p:dataTable>
-</body>
-</html>
+		</p:dataTable>
+	</ui:define>
+</ui:composition>
