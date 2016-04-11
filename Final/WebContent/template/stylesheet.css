@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+
+#page {
+	margin: 25px;
+}
+
+#header-container {
+	border: 1px solid black;
+	background-color: #CDC9C9;
+	width: 1024px;
+	height: 100px;
+	padding: 1px;
+}
+
+#menu {
+	border: 1px solid black;
+	background-color: #F5DEB3;
+	width: 150px;
+	height: 100px;
+	display: inline-block;
+}
+
+#content {
+	margin-left:-3px;
+	border: 1px solid black;
+	background-color: #00BFFF;
+	width: 872px;
+	height: 100px;
+	float-left: 500px;
+	display: inline-block;
+}
+
+#footer-container {
+	border: 1px solid black;
+	background-color: #3CB371;
+	width: 1024px;
+	height: 100px;
+	padding: 1px;
+}
+
+#content-container {
+	padding: 1px;
+}
+
+#borda{
+	border: 1px solid black;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<h:outputStylesheet name="stylesheet.css" library="css" />
+	<h:outputStylesheet name="css/skel.css" library="css" />
+	<h:outputStylesheet name="css/style.css" library="css" />
+	<h:outputStylesheet name="css/style-wide.css" library="css" />
+</h:head>
+<h:body>
+	<ui:composition>
+
+		<div id="header">
+
+			<!-- Logo -->
+
+			<h1>
+				<img src='imagens/Ico.jpg' class='icon major' id="icone" alt='icone'></img>
+				<a href="/index.xhtml" id="logo">IFPB <em>Campus Campina
+						Grande</em></a>
+				<div>Bem-vindo!</div>
+			</h1>
+			<!-- Banner -->
+			<section id="banner"> <header>
+			<h2>
+				Q-Monitor: <em>Sistema de Gerenciamento de Monitoria para
+					Institutos Federais de Educação, Ciência e Tecnologia da Paraíba
+					(IFPB's).</em>
+			</h2>
+			</header> </section>
+
+			<h:form>
+				<p:growl id="messages" />
+
+				<p:menubar>
+					<p:submenu label="Cadastrar" icon="ui-icon-document">
+						<p:submenu label="Novo" icon="ui-icon-contact">
+							<p:menuitem value="Monitor" url="Xhtml/cadastro.xhtml" />
+						</p:submenu>
+					</p:submenu>
+
+					<p:submenu label="Procurar" icon="ui-icon-pencil">
+						<p:menuitem value="Monitor" url="Xhtml/find.xhtml"
+							icon="ui-icon-arrowreturnthick-1-w" />
+					</p:submenu>
+				</p:menubar>
+			</h:form>
+
+		</div>
+
+	</ui:composition>
+</h:body>
+</h:html>

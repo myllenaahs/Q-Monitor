@@ -4,32 +4,34 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui" template="/template/layout.xhtml">
 <h:head>
-<meta charset="ISO-8859-1"/>
-<title>Q-Monitor</title>
+	<meta charset=" ISO-8859-1" />
+	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/skel.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style-wide.css" />
+	<title>Q-Monitor</title>
 
 </h:head>
 <h:body>
+	<div id="header">
+		<ui:insert name="header">
+			<ui:include src="/template/header.xhtml" />
+		</ui:insert>
+	</div>
 
-	<form>
-	    <p:panel id="panel"> 
-	 
-	        <h:panelGrid columns="3" cellpadding="5">
-	            <p:outputLabel  value="Cadastrar Monitor:" />	            
-				<p:button outcome="cadastro" value="Cadastrar"/>
-				
-			</h:panelGrid>
-			
-	 		<h:panelGrid columns="3" cellpadding="5">
-	            <p:outputLabel value="Procurar Monitor:" />
-	            
-				<p:button outcome="find" value="Procurar"/>
-				
-	        </h:panelGrid>
-	 
-	      </p:panel>
-	</form>
-	
+<div id="content">
+		<ui:insert name="content">
+			<ui:include src="/template/content.xhtml" />
+		</ui:insert>
+	</div>
+
+	<div id="footer">
+		<ui:insert name="footer">
+			<ui:include src="/template/footer.xhtml" />
+		</ui:insert>
+	</div>
+
 </h:body>
 </html>

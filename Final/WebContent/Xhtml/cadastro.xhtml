@@ -4,12 +4,24 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui" template="template/layout.xhtml">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Cadastro de Monitores</title>
+
+	<meta charset=" ISO-8859-1" />
+	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/skel.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style-wide.css" />
 </h:head>
 <h:body>
+
+	<div id="header">
+		<ui:insert name="header">
+			<ui:include src="/template/header.xhtml" />
+		</ui:insert>
+	</div>
 	<h:form>
 
 		<p:growl id="growl" showDetail="true" sticky="true" />
@@ -19,7 +31,7 @@
 
 			<h:panelGrid columns="3" cellpadding="5">
 				<h:outputText value="Nome: " />
-				<p:inputText value="${monitorBean.monitor.nome}"  required="true" />
+				<p:inputText value="${monitorBean.monitor.nome}" required="true" />
 			</h:panelGrid>
 
 			<h:panelGrid columns="3" cellpadding="5">
@@ -51,14 +63,20 @@
 			</h:panelGrid>
 
 			<h:panelGrid>
-				<p:commandButton id="cadastrar" action="#{monitorBean.cadastrar}" onClick="index.xhtml"
-					actionListener="#{growlView.saveMessage}" update="growl"
-					value="Cadastrar" />
+				<p:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
+					onClick="index.xhtml" actionListener="#{growlView.saveMessage}"
+					update="growl" value="Cadastrar" />
 			</h:panelGrid>
 		</p:panel>
 
 		<p:commandButton id="voltar" action="index.xhtml" value="Voltar" />
 	</h:form>
+	
+	<div id="footer">
+		<ui:insert name="footer">
+			<ui:include src="/template/footer.xhtml" />
+		</ui:insert>
+	</div>
 
 </h:body>
 </html>
